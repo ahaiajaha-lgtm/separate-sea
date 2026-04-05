@@ -3,6 +3,10 @@ let day = 1;
 const text = document.getElementById("text");
 const roomImage = document.getElementById("roomImage");
 const sleepBtn = document.getElementById("sleepBtn");
+document.getElementById("chair").onclick = () => {
+  text.innerText = "It's slightly warm.";
+};
+
 
 function updateRoom() {
   text.innerText = "Day " + day;
