@@ -30,6 +30,31 @@ function updateRoom() {
   }
 }
 
+if (day === 6) {
+  text.innerText = "You already slept.";
+}
+
+if (day === 7) {
+  text.innerText = "The chair was always facing you.";
+}
+
+function playCreepSound() {
+  const audio = new Audio("whisper.mp3");
+  audio.volume = 0.2;
+  audio.play();
+}
+
+if (day >= 3 && Math.random() < 0.3) {
+  setTimeout(playCreepSound, 2000);
+}
+
+if (day === 4) {
+  setInterval(() => {
+    roomImage.style.opacity = 
+      roomImage.style.opacity == 1 ? 0.95 : 1;
+  }, 300);
+}
+
 sleepBtn.onclick = () => {
   day++;
   updateRoom();
