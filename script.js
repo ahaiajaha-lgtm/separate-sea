@@ -41,6 +41,9 @@ if (day === 6) {
 if (day === 7) {
   text.innerText = "The chair was always facing you.";
 }
+if (day === 10) {
+  document.body.innerHTML = "<h1>You never left.</h1>";
+}
 
 function playCreepSound() {
   const audio = new Audio("whisper.mp3");
